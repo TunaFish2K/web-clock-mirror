@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title localize key="title"></title>
+    <script type="module" src="./script/index.js"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #clock {
+            font-size: 1000%;
+        }
+
+        #switch {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+
+            background: none;
+            border: none;
+        }
+
+        #repository {
+            position: fixed;
+            left: 40px;
+            bottom: 40px;
+
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id=clock>
+
+    </div>
+    <button id="switch" onclick="Clock.switch()">
+        <img width="80" height="80" src="./resources/images/day.svg" />
+    </button>
+    <a id="repository">
+        <img width="40" height="40" src="./resources/images/gitlab.svg">
+    </a>
+</body>
+</html>

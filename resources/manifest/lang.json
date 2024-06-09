@@ -1,0 +1,8 @@
+{
+    "type": "json",
+    "prefix": "lang/",
+    "values": {
+        "en-us": "en_us.json",
+        "zh-cn": "zh_cn.json"
+    }
+}
