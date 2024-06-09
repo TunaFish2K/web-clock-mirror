@@ -1,11 +1,16 @@
-import { Clock } from "./clock.js";
+// @ts-check
+
+import { Clock, Mode } from "./clock.js";
 
 export function render() {
+    // @ts-ignore
     document.documentElement.style.setProperty("--backgroundColor", Clock.backgroundColor);
+    // @ts-ignore
     document.documentElement.style.setProperty("--textColor", Clock.textColor);
     document.documentElement.style.setProperty("--shadowColor", Clock.textColor + "19");
 
     const clock = document.getElementById("clock");
+    // @ts-ignore
     clock.innerText = (() => {
         const date = new Date();
         const hours = date.getHours();
@@ -16,14 +21,16 @@ export function render() {
     })();
 
     const switchButton = document.getElementById("switch");
-    if (Clock.isDay) {
-        (/** @type {HTMLDivElement} */switchButton.children[0]).hidden = false;
-        (/** @type {HTMLDivElement} */switchButton.children[1]).hidden = true;
-    }
-    else {
-        (/** @type {HTMLDivElement} */switchButton.children[1]).hidden = false;
-        (/** @type {HTMLDivElement} */switchButton.children[0]).hidden = true;
-    }
+
+    Object.values(Mode).forEach((mode, index) => {
+        if (Clock.mode != mode) {
+            // @ts-ignore
+            (/** @type {HTMLDivElement} */switchButton.children[index]).hidden = true;
+        } else {
+            // @ts-ignore
+            (/** @type {HTMLDivElement} */switchButton.children[index]).hidden = false;
+        }
+    });
 }
 
 /**
