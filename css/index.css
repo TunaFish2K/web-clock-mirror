@@ -4,6 +4,10 @@
     --shadowColor: #000000;
 }
 
+.hideCursor {
+    cursor: none !important;
+}
+
 .theme {
     background: var(--backgroundColor);
     color: var(--textColor);
@@ -19,6 +23,7 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 #clock {

@@ -5,6 +5,7 @@ import { localize } from "./localization.js"
 import { render } from "./render.js";
 import { loadAll as loadALlResources } from "./resource.js";
 import { init as initSettings } from "./settings.js";
+import { start as startCursorHide } from "./cursor.js";
 
 window.addEventListener("load", async () => {
     await loadALlResources();
@@ -14,6 +15,7 @@ window.addEventListener("load", async () => {
     initSettings();
 
     localize(navigator.language.toLowerCase());
+    startCursorHide();
 
     setInterval(render, 200);
 });
