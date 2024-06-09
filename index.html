@@ -8,50 +8,56 @@
     <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./script/index.js"></script>
 </head>
+
 <body class="theme">
-    <div id=clock class="theme">
+    <div localize key="loading" id="loading">
 
     </div>
-    <button id="switch" onclick="Clock.switch()">
-        <div>
-            <object type="image/svg+xml" data="./resources/images/day.svg"
-        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-        </object>
+    <div id="content" hidden>
+        <div id=clock class="theme">
+
         </div>
-        <div>
-            <object type="image/svg+xml" data="./resources/images/night.svg"
-        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-        </object>
-        </div>
-        <div>
-            <object type="image/svg+xml" data="./resources/images/custom.svg"
-        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-        </object>
-        </div>
-    </button>
-    <button id="openSettings">
-        <object type="image/svg+xml" data="./resources/images/settings.svg"
-        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-        </object>
-    </button>
-    <a id="repository" href="https://gitlab.com/tf2k/web-clock">
-        <object type="image/svg+xml" data="./resources/images/gitlab.svg"
-        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-        </object>
-    </a>
-    <dialog id="settings" class="theme">
-        <div id="backgroundSetting">
-            <div id="backgroundColorText" localize key="background_color"></div> <input class="reverseTheme" type="text" id="backgroundColorInput" autocomplete="off" spellcheck="false">
-        </div>
-        <div style="height: 5px">
-        </div>
-        <div id="textSetting">
-            <div id="textColorText" localize key="text_color"></div> <input class="reverseTheme" type="text" id="textColorInput" autocomplete="off" spellcheck="false">
-        </div>
-        <div style="height: 5px"></div>
-        <div localize key="drop_custom_hint" class="theme"></div>
-        <button class="reverseTheme" id="submitSettings">确定</button>
-        <button class="reverseTheme" id="closeSettings">关闭</button>
-    </dialog>
+        <button id="switch" onclick="Clock.switch()">
+            <div>
+                <object type="image/svg+xml" data="./resources/images/day.svg"
+            onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+            </object>
+            </div>
+            <div>
+                <object type="image/svg+xml" data="./resources/images/night.svg"
+            onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+            </object>
+            </div>
+            <div>
+                <object type="image/svg+xml" data="./resources/images/custom.svg"
+            onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+            </object>
+            </div>
+        </button>
+        <button id="openSettings">
+            <object type="image/svg+xml" data="./resources/images/settings.svg"
+            onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+            </object>
+        </button>
+        <a id="repository" href="https://gitlab.com/tf2k/web-clock">
+            <object type="image/svg+xml" data="./resources/images/gitlab.svg"
+            onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+            </object>
+        </a>
+        <dialog id="settings" class="theme">
+            <div id="backgroundSetting">
+                <div id="backgroundColorText" localize key="background_color"></div> <input class="reverseTheme" type="text" id="backgroundColorInput" autocomplete="off" spellcheck="false">
+            </div>
+            <div style="height: 5px">
+            </div>
+            <div id="textSetting">
+                <div id="textColorText" localize key="text_color"></div> <input class="reverseTheme" type="text" id="textColorInput" autocomplete="off" spellcheck="false">
+            </div>
+            <div style="height: 5px"></div>
+            <div localize key="drop_custom_hint" class="theme"></div>
+            <button class="reverseTheme" id="submitSettings" localize key="save_settings"></button>
+            <button class="reverseTheme" id="closeSettings" localize key="close_settings"></button>
+        </dialog>
+    </div>
 </body>
 </html>
