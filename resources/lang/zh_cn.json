@@ -1,9 +1,12 @@
 {
+    "__LANGUAGE_NAME": "简体中文",
+
     "title": "时钟",
     "background_color": "背景颜色",
     "text_color": "文本颜色",
     "drop_custom_hint": "快速点击切换键5次可以切换回日间模式。",
     "save_settings": "保存",
     "close_settings": "关闭",
-    "loading": "加载中. . ."
+    "loading": "加载中. . .",
+    "language": "语言"
 }

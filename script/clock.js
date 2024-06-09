@@ -1,4 +1,4 @@
-// @ts-check
+import { parseColor } from "./render.js";
 
 /**
  * @enum { number }
@@ -83,13 +83,15 @@ export class Clock {
     }
 
     static load() {
-        const data = localStorage.getItem("clock");
+        let data = localStorage.getItem("clock");
         if (!data) return this.light();
 
         try {
-            Object.assign(this, JSON.parse(data));
+            data = JSON.parse(data);
+            parseColor(data["backgroundColor"]);
+            parseColor(data["textColor"]);
+            Object.assign(this, data);
         } catch(e) {
-            console.error(e);
             this.light();
         }
         

@@ -123,6 +123,25 @@ body, html {
     box-shadow: 0px 0px 10px var(--shadowColor) inset;
 }
 
+#languageSetting {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 20px;
+}
+
+#languageSetting select {
+    color:#000000;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    height:20px;
+    width:100px;
+    position: relative;
+    transform: translateX(60px);
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px var(--shadowColor) inset;
+}
+
 #loading {
     z-index: -1;
     width: 100%;

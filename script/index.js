@@ -2,7 +2,7 @@ import { Clock } from "./clock.js";
 import { localize } from "./localization.js"
 import { render } from "./render.js";
 import { loadAll as loadAllResources } from "./resource.js";
-import { init as initSettings } from "./settings.js";
+import { currentLanguage, init as initSettings, save } from "./settings.js";
 import { start as startCursorHide } from "./cursor.js";
 
 /**
@@ -23,7 +23,7 @@ window.addEventListener("load", async () => {
     Clock.load();
     initSettings();
 
-    localize(navigator.language.toLowerCase());
+    localize(currentLanguage);
     startCursorHide();
 
     setInterval(render, 200);
@@ -33,4 +33,5 @@ window.addEventListener("load", async () => {
 
 window.onbeforeunload = () => {
     Clock.save();
+    save();
 };

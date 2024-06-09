@@ -1,9 +1,12 @@
 {
+    "__LANGUAGE_NAME": "English",
+
     "title": "Clock",
     "background_color": "Background Color",
     "text_color": "Text Color",
     "drop_custom_hint": "Click the switch button 5 times to switch back to Light mode.",
     "save_settings": "Save",
     "close_settings": "Close",
-    "loading": "Loading. . ."
+    "loading": "Loading. . .",
+    "language": "Language"
 }
