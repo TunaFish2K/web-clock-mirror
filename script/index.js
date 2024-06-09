@@ -28,6 +28,7 @@ window.addEventListener("load", async () => {
 
     setInterval(render, 200);
     document.getElementById("content").hidden=false;
+    document.body.removeChild(document.getElementById("loading"));
 });
 
 window.onbeforeunload = () => {
