@@ -3,7 +3,7 @@ import { Clock } from "./clock.js";
 export function render() {
     document.documentElement.style.setProperty("--backgroundColor", Clock.backgroundColor);
     document.documentElement.style.setProperty("--textColor", Clock.textColor);
-    document.documentElement.style.setProperty("--shadowColor", Clock.textColor + "7F");
+    document.documentElement.style.setProperty("--shadowColor", Clock.textColor + "19");
 
     const clock = document.getElementById("clock");
     clock.innerText = (() => {
