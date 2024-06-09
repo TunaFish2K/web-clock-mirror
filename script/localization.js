@@ -11,10 +11,10 @@ export function localize(lang) {
     let data = RESOURCES.LANG.get(lang);
     if (!data) {
         console.warn(`language ${lang} not found!`);
-        if (lang=="en_us") return;
-        lang = "en_us";
-        data = RESOURCES.LANG.get("en_us");
-        if (!data) return console.warn("language en_us not found!");
+        if (lang=="en") return;
+        lang = "en";
+        data = RESOURCES.LANG.get("en");
+        if (!data) return console.warn("language en not found!");
     }
 
     const elements = document.querySelectorAll("*[localize]");

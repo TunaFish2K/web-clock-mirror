@@ -2,7 +2,7 @@
     "type": "json",
     "prefix": "lang/",
     "values": {
-        "en-us": "en_us.json",
+        "en": "en.json",
         "zh-cn": "zh_cn.json"
     }
 }
