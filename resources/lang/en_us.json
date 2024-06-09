@@ -1,5 +1,6 @@
 {
     "title": "Clock",
     "background_color": "Background Color",
-    "text_color": "Text Color"
+    "text_color": "Text Color",
+    "drop_custom_hint": "Click the switch button 5 times to switch back to Light mode."
 }

@@ -1,5 +1,6 @@
 {
     "title": "时钟",
     "background_color": "背景颜色",
-    "text_color": "文本颜色"
+    "text_color": "文本颜色",
+    "drop_custom_hint": "快速点击切换键5次可以切换回日间模式。"
 }
