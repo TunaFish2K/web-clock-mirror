@@ -1,4 +1,5 @@
 {
     "title": "Clock",
-    "test": "Test"
+    "background_color": "Background Color",
+    "text_color": "Text Color"
 }

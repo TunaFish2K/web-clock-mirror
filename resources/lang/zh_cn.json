@@ -1,4 +1,5 @@
 {
     "title": "时钟",
-    "test": "测试"
+    "background_color": "背景颜色",
+    "text_color": "文本颜色"
 }

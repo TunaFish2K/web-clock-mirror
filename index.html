@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title localize key="title"></title>
+    <link rel="stylesheet" href="./css/noto-sans-sc.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./script/index.js"></script>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #clock {
-            font-size: 1000%;
-        }
-
-        #switch {
-            position: fixed;
-            right: 40px;
-            bottom: 40px;
-
-            background: none;
-            border: none;
-        }
-
-        #repository {
-            position: fixed;
-            left: 40px;
-            bottom: 40px;
-
-            background: none;
-            border: none;
-        }
-    </style>
 </head>
-<body>
-    <div id=clock>
+<body class="theme">
+    <div id=clock class="theme">
 
     </div>
     <button id="switch" onclick="Clock.switch()">
-        <img width="80" height="80" src="./resources/images/day.svg" />
+        <div>
+            <object type="image/svg+xml" data="./resources/images/day.svg"
+        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+        </object>
+        </div>
+        <div>
+            <object type="image/svg+xml" data="./resources/images/night.svg"
+        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+        </object>
+        </div>
+        
+    </button>
+    <button id="openSettings">
+        <object type="image/svg+xml" data="./resources/images/settings.svg"
+        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+        </object>
     </button>
     <a id="repository" href="https://gitlab.com/tf2k/web-clock">
-        <img width="40" height="40" src="./resources/images/gitlab.svg">
+        <object type="image/svg+xml" data="./resources/images/gitlab.svg"
+        onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
+        </object>
     </a>
+    <dialog id="settings" class="theme">
+        <div id="backgroundSetting">
+            <div id="backgroundColorText" localize key="background_color"></div> <input class="reverseTheme" type="text" id="backgroundColorInput" autocomplete="off">
+        </div>
+        <div style="height: 5px">
+        </div>
+        <div id="textSetting">
+            <div id="textColorText" localize key="text_color"></div> <input class="reverseTheme" type="text" id="textColorInput" autocomplete="off">
+        </div>
+        <button class="reverseTheme" id="submitSettings">确定</button>
+        <button class="reverseTheme" id="closeSettings">关闭</button>
+    </dialog>
 </body>
 </html>
