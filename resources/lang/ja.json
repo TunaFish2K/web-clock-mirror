@@ -1,0 +1,11 @@
+{  
+  "__LANGUAGE_NAME": "日本語",  
+  "title": "時計",  
+  "background_color": "背景色",  
+  "text_color": "文字色",  
+  "drop_custom_hint": "スイッチボタンを5回タップして、ライトモードに戻ります。",  
+  "save_settings": "保存",  
+  "close_settings": "閉じる",  
+  "loading": "読み込み中...",  
+  "language": "言語"  
+}
