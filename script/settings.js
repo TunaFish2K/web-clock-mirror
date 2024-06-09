@@ -1,34 +1,32 @@
-// @ts-check
-
 import { parseColor } from "./render.js";
 
 export function init() {
     const submit = document.getElementById("submitSettings");
     const close = document.getElementById("closeSettings");
     const settings = document.getElementById("settings");
+
     /**
      * @type { HTMLInputElement }
      */
-    // @ts-ignore
     const backgroundColorInput = document.getElementById("backgroundColorInput");
     /**
      * @type { HTMLInputElement }
      */
-    // @ts-ignore
     const textColorInput = document.getElementById("textColorInput");
     const open = document.getElementById("openSettings");
     
-    // @ts-ignore
     open.addEventListener("click", () => {
+        if (settings.getAttribute("open")) {
+            settings.removeAttribute("open");
+            return;
+        }
+
         backgroundColorInput.value = globalThis.Clock.backgroundColor;
         textColorInput.value = globalThis.Clock.textColor;
-        // @ts-ignore
-        document.getElementById('settings').setAttribute('open', null);
+        settings.setAttribute("open", true);
     });
 
-    // @ts-ignore
     submit.addEventListener("click", () => {
-        // @ts-ignore
         settings.removeAttribute("open");
         const backgroundColor = backgroundColorInput.value;
         const textColor = textColorInput.value;
@@ -45,9 +43,7 @@ export function init() {
         }
     });
 
-    // @ts-ignore
     close.addEventListener("click", () => {
-        // @ts-ignore
         settings.removeAttribute("open");
     })
 }
